@@ -39,7 +39,7 @@ public class AdminController {
             productRepository.deleteById(itemId);
             return "Item removed successfully";
         }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Item not found",null);
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Item not found",null);
     }
 
     // Update details of existing grocery item
@@ -51,7 +51,7 @@ public class AdminController {
             productRepository.save(updatedItem);
             return "Item updated successfully";
         }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Item not found",null);
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Item not found",null);
     }
 
     // Manage inventory levels of grocery item
@@ -64,7 +64,7 @@ public class AdminController {
             productRepository.save(item);
             return "Inventory updated successfully";
         }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Item not found",null);
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Item not found",null);
     }
 
 }
