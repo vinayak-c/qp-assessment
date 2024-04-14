@@ -49,11 +49,6 @@ Follow these steps to build and run the application on your local machine:
      ```
      http://localhost:8080
      ```
-6. **Access the H2 database**: 
-   - Once the application is up and running, you can access the APIs using the following base URL:
-     ```
-     http://localhost:8080
-     ```
 
 ### Application APIs
 
